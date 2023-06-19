@@ -44,14 +44,14 @@ def show_happy(event):
         c.itemconfigure(cheek_right, state=NORMAL)
         c.itemconfigure(mouth_happy, state=NORMAL)
         c.itemconfigure(mouth_normal, state=HIDDEN)
-        c.itemconfigure(mouth_sad, state=HIDDEN)
+        c.itemconfigure(hide_happy, state=HIDDEN)
     return
 def hide_happy(event):
     c.itemconfigure(cheek_left, state=HIDDEN)
     c.itemconfigure(cheek_right, state=HIDDEN)
     c.itemconfigure(mouth_happy, state=HIDDEN)
     c.itemconfigure(mouth_normal, state=NORMAL)
-    c.itemconfigure(mouth_sad, state=HIDDEN)
+    c.itemconfigure(hide_happy, state=HIDDEN)
     return
 c.bind('<Motion>', show_happy)
 c.bind('<Leave>', hide_happy)
